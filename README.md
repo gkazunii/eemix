@@ -92,6 +92,9 @@ In our algorithm, α is treated as a hyperparameter. α controls the sensitivity
 
 Gradient-based methods require careful tuning of learning rates. Our E²M algorithm achieves similar or better optimization performance without learning rate tuning.
 
+#### 💡What are the advantages compared to MU methods?
+
+Current MU methods do not guarantee normalization and are not ideal for the task of density estimation. Even if this problem were overcome, flexibility such as mixture and adaptive background terms cannot be expected due to the α power term in the auxiliary function.
 
 #### 💡What is the computational complexity per iteration?
 
