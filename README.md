@@ -61,9 +61,7 @@ The α-divergence can be bounded by the KL divergences using Jensen’s inequali
 
     E2-step: Tightens the bound from KL divergence to α-divergence.
 
-Both E1 and E2 steps admit closed-form updates. The M-step benefits from a key property: since the ELBO contains no sum inside the logarithm, many low-rank structures decouple into independent subproblems. This enables simultaneous closed-form updates of all parameters. Moreover, the M-step is equivalent to a many-body approximation, which becomes a convex optimization regardless of the low-rank structure, even if the closed-form updates are not available. 
-
-In short, the proposed algorithm can be viewed as an EM framework for tensor many-body approximation with hidden variables [[3](https://openreview.net/forum?id=5yedZXV7wt)]. Extending information geometric interpretations (see the case α → 1 discussed in [3]).
+Both E1 and E2 steps admit closed-form updates. The M-step benefits from a key property: since the ELBO contains no sum inside the logarithm, many low-rank structures decouple into independent subproblems. This enables simultaneous closed-form updates of all parameters. Moreover, the M-step is equivalent to a many-body approximation, which becomes a convex optimization regardless of the low-rank structure, even if the closed-form updates are not available. In short, the algorithm can be viewed as an EM framework for tensor many-body approximation with hidden variables [[3](https://openreview.net/forum?id=5yedZXV7wt)]. 
 
 #### What is α-divergence, and why optimize it?
 
@@ -95,7 +93,7 @@ Since the closed-update formula in the M-step for the CP, Tucker, and Tensor Tra
 
 #### Can we apply the algorithm to a non-normalized tensor?
 
-Our method assumes that the input tensor is normalized. If the tensor is not normalized, the following heuristic can be applied. First, record the total sum $\lambda$ of the input tensor $T$. Then, normalize the input tensor and apply the E2M algorithm. Finally, multiply the reconstructed tensor by $\lambda$. For example, in the case of optimizing the KL divergence for positive measures (often called I-divergence), the sum of the reconstrcted tensor is same as sum of input tensor and the sum of  preserved, so this heuristic is reasonable.
+Our method assumes that the input tensor is normalized. If the tensor is not normalized, the following heuristic can be applied. First, record the total sum $\lambda$ of the input tensor $T$. Then, normalize the input tensor and apply the E2M algorithm. Finally, multiply the reconstructed tensor by $\lambda$. For example, in the case of optimizing the KL divergence for positive measures (often called I-divergence), the sum of the reconstrcted tensor is same as sum of input tensor, so this heuristic is reasonable.
 
 #### Can we apply the algorithm to a real-valued tensor?
 
