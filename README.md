@@ -94,7 +94,11 @@ Gradient-based methods require careful tuning of learning rates. Our E²M algori
 
 #### 💡What are the advantages compared to MU methods?
 
-Current MU methods do not guarantee normalization and are not ideal for the task of density estimation. Even if this problem were overcome, flexibility such as mixture and adaptive background terms cannot be expected due to the α power term in the auxiliary function.
+Current MU methods do not guarantee normalization and are not ideal for the task of density estimation [[4](https://ieeexplore.ieee.org/document/4517988)]. Even if this problem were overcome, flexibility such as mixture and adaptive background terms cannot be expected due to the α power term in the auxiliary function.
+
+#### 💡What are the advantages compared to αEM algorithm?
+
+The αEM algorithm replaces the logarithmic function in the log-likelihood with a generalized α-logarithm [[5](https://onlinelibrary.wiley.com/doi/abs/10.1002/1520-684X(200010)31:11%3C12::AID-SCJ2%3E3.0.CO;2-O)]. However, in many cases, it does not admit closed-form updates in the M-step. In contrast, the E²M algorithm first relaxes the α-divergence into the KL divergence optimization, ensuring that closed-form updates are always possible whenever the standard EM algorithm permits them.
 
 #### 💡What is the computational complexity per iteration?
 
