@@ -44,7 +44,7 @@ Clone the repository and open the demo files provided as a Jupyter notebook.
 - 📘 [demo_dense.ipynb](https://github.com/gkazunii/eemix/blob/main/demo/demo_dense.ipynb)
 - 📘 [demo_sparse.ipynb](https://github.com/gkazunii/eemix/blob/main/demo/demo_sparse.ipynb)
 
-Just click and open the demo files. All necessary instructions are described there.
+All necessary instructions are described there.
 
 ## FAQ
 
