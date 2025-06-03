@@ -96,7 +96,7 @@ Our method assumes that the input tensor is normalized. If the tensor is not nor
 
 #### 💡Can we apply the algorithm to a real-valued tensor?
 
-No. 
+No. Non-negativity is an essential assumption of the E²M algorithm.
 
 ## License
 
