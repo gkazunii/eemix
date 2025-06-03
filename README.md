@@ -39,7 +39,8 @@ For technical details and theoretical background, see the preprint:
 
 ## How to Run
 
-We provided two demo files as a Jupyter notebook.
+Clone the repository and open the demo files provided as a Jupyter notebook.
+
 - 📘 [demo_dense.ipynb](https://github.com/gkazunii/eemix/blob/main/demo/demo_dense.ipynb)
 - 📘 [demo_sparse.ipynb](https://github.com/gkazunii/eemix/blob/main/demo/demo_sparse.ipynb)
 
