@@ -18,12 +18,12 @@ This repository provides a non-negative tensor decomposition algorithm for optim
 6. ✨**Convergence Guarantee**  
    The objective function is guaranteed to decrease monotonically at each iteration, ensuring convergence.
 
-## 🛠️ Environment
+## Environment
 
 - Python 3.12.3  
 - NumPy 2.2.2
 
-## 🧑‍💻 Authors and Citation
+## Authors and Citation
 
 This is joint work by  
 
@@ -37,15 +37,15 @@ For technical details and theoretical background, see the preprint:
 📄 [E²M: Double-Bound α-Divergence Optimization for Tensor-Based Discrete Density Estimation](https://arxiv.org/abs/2405.18220)
 
 
-## 🚀 How to Run
+## How to Run
 
 We provided two demo files as a Jupyter notebook.
-📘 [demo_dense.ipynb](https://github.com/gkazunii/eemix/blob/main/demo/demo_dense.ipynb)
-📘 [demo_sparse.ipynb](https://github.com/gkazunii/eemix/blob/main/demo/demo_sparse.ipynb)
+- 📘 [demo_dense.ipynb](https://github.com/gkazunii/eemix/blob/main/demo/demo_dense.ipynb)
+- 📘 [demo_sparse.ipynb](https://github.com/gkazunii/eemix/blob/main/demo/demo_sparse.ipynb)
 
 Just click and open the demo files. All necessary instructions are described there.
 
-## ❓FAQ
+## FAQ
 
 #### 💡What is the novelty of this algorithm?
 
