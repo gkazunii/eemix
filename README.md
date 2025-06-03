@@ -75,7 +75,7 @@ This divergence family includes:
 
     the KL divergence as α → 1,
 
-    the Hellinger distance as α = 0.5
+    the Hellinger distance as α = 0.5,
 
     the reverse KL divergence as α → 0.
 
