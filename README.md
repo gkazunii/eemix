@@ -91,11 +91,11 @@ Gradient-based methods require careful tuning of learning rates. Our E²M algori
 
 #### What is the computational complexity per iteration?
 
-Since the closed-update formula in the M-step for the CP, Tucker, and Tensor Train structures is proportional to the input tensor $T$, the computational complexity is proportional to the number of nonzero element in T. Specifically, the computational complexity per iteration is O(DNR) for the CP structure, O(DNR^D) for Tucker structure, and  O(NDR^2) for the Train structure, where $N$ is the number of nonzero element in $T$, $R$ is the tensor rank, and $D$ is the tensor order.
+Since the closed-update formula in the M-step for the CP, Tucker, and Tensor Train structures is proportional to the input tensor $T$, the computational complexity is proportional to the number of nonzero element in $T\in\mathbb{R}^{I\times\dots\times I}$. Specifically, the computational complexity per iteration is $O(DNR)$ for the CP structure, $O(DNR^D)$ for Tucker structure, and $O(NDR^2)$ for the Train structure, where $N$ is the number of nonzero element in $T$, $R$ is the tensor rank, and $D$ is the tensor order. We emphasize that computational complexity is not proportional to $I^D$ where $I$ is the 
 
 #### Can we apply the algorithm to a non-normalized tensor?
 
-Our method assumes that the input tensor is normalized. If the tensor is not normalized, the following heuristic can be applied. First, record the total sum $\lambda$ of the input tensor $T$. Then, normalize the input tensor and apply the E2M algorithm. Finally, multiply the reconstructed tensor by $\lambda$. For example, in the case of optimizing the KL divergence for positive measures, the input and output sums are preserved, so this heuristic is reasonable.
+Our method assumes that the input tensor is normalized. If the tensor is not normalized, the following heuristic can be applied. First, record the total sum $\lambda$ of the input tensor $T$. Then, normalize the input tensor and apply the E2M algorithm. Finally, multiply the reconstructed tensor by $\lambda$. For example, in the case of optimizing the KL divergence for positive measures (often called I-divergence), the sum of the reconstrcted tensor is same as sum of input tensor and the sum of  preserved, so this heuristic is reasonable.
 
 #### Can we apply the algorithm to a real-valued tensor?
 
