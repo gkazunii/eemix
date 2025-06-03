@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/downloads/release/python-3120/)
 
-This repository provides a non-negative tensor decomposition algorithm for optimizing the α-divergence using a double-bound strategy. The method has the following key advantages:
+This repository provides a non-negative tensor decomposition algorithm for optimizing the α-divergence using a double-bound strategy. The method has the following advantages:
 
 1. ✨**No More Learning Rate Tuning**  
    Our approach is based on a double-bound EM algorithm, where all parameters are updated simultaneously at each step. It does not rely on gradient-based optimization, eliminating the need for learning rate tuning.
@@ -13,7 +13,7 @@ This repository provides a non-negative tensor decomposition algorithm for optim
    The algorithm supports a wide range of low-rank tensor structures, including CP, Tucker, Tensor Train, their mixtures, and adaptive background terms. It handles both sparse and dense tensors with various objective functions, including KL divergence (α = 1.0) and Hellinger distance (α = 0.5).
 
 5. ✨**Robustness Control via α-Divergence**  
-   Optimizing the α-divergence enables control over sensitivity to outliers and noise. When α → 0 (reverse KL divergence), the algorithm exhibits mass-covering behavior that ignores small outliers; when α = 1 (KL divergence), it shows mode-seeking behavior that focuses on dense regions. This implementation supports 0 < α ≤ 1.
+   Optimizing the α-divergence enables control over sensitivity to outliers and noise. When α → 0 (reverse KL divergence), the algorithm exhibits mass-covering behavior that ignores small outliers; when α = 1 (KL divergence), it shows mode-seeking behavior. This implementation supports 0 < α ≤ 1.
 
 6. ✨**Convergence Guarantee**  
    The objective function is guaranteed to decrease monotonically at each iteration, ensuring convergence.
@@ -79,7 +79,7 @@ This divergence family includes:
 
     the reverse KL divergence as α → 0.
 
-In our algorithm, α is treated as a hyperparameter. α controls the sensitivity of the reconstruction to outliers and noise. Please refer to the demo file to confirm the robustness of the outliers.
+In our algorithm, α is treated as a hyperparameter. α controls the sensitivity of the reconstruction to outliers and noise. Please refer to the [demo file](https://github.com/gkazunii/eemix/blob/main/demo/demo_dense.ipynb) to confirm the robustness of the outliers.
 
 #### 💡What are the advantages compared to gradient-based methods?
 
@@ -92,7 +92,7 @@ Since the closed-update formula in the M-step for the CP, Tucker, and Tensor Tra
 
 #### 💡Can we apply the algorithm to a non-normalized tensor?
 
-Our method assumes that the input tensor is normalized. If the tensor is not normalized, the following heuristic can be applied. First, record the total sum $\lambda$ of the input tensor $T$. Then, normalize the input tensor and apply the E2M algorithm. Finally, multiply the reconstructed tensor by $\lambda$. For example, in the case of optimizing the KL divergence for positive measures (often called I-divergence), the sum of the reconstructed tensor is the same as the sum of the input tensor, so this heuristic is reasonable.
+Our method assumes that the input tensor is normalized. If the tensor is not normalized, the following heuristic can be applied. First, record the total sum $\lambda$ of the input tensor $T$. Then, normalize the input tensor and apply the E2M algorithm. Finally, multiply the reconstructed tensor by $\lambda$. Please refer to the example for image reconstrction in the [demo file](https://github.com/gkazunii/eemix/blob/main/demo/demo_dense.ipynb). In the case of optimizing the KL divergence for positive measures (often called I-divergence), the sum of the reconstructed tensor is the same as the sum of the input tensor, so this heuristic is reasonable.
 
 #### 💡Can we apply the algorithm to a real-valued tensor?
 
