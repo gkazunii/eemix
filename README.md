@@ -9,7 +9,7 @@ This repository provides a non-negative tensor decomposition algorithm for optim
 1. ✨**No More Learning Rate Tuning**  
    Our approach is based on a double-bound EM algorithm, where all parameters are updated simultaneously at each step. It does not rely on gradient-based optimization, eliminating the need for learning rate tuning.
 
-3. ✨**Unified Framework for Tensor Decomposition**  
+3. ✨**Unified Framework for Non-negative Tensor Decomposition**  
    The algorithm supports a wide range of low-rank tensor structures, including CP, Tucker, Tensor Train, their mixtures, and adaptive background terms. It handles both sparse and dense tensors with various objective functions, including KL divergence (α = 1.0) and Hellinger distance (α = 0.5).
 
 5. ✨**Robustness Control via α-Divergence**  
