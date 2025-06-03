@@ -18,12 +18,12 @@ This repository provides a non-negative tensor decomposition algorithm for optim
 6. ✨**Convergence Guarantee**  
    The objective function is guaranteed to decrease monotonically at each iteration, ensuring convergence.
 
-## Environment
+## 🛠️ Environment
 
 - Python 3.12.3  
 - NumPy 2.2.2
 
-## Authors and Citation
+## 🧑‍💻 Authors and Citation
 
 This is joint work by  
 
@@ -31,21 +31,21 @@ This is joint work by
 - [Jesper Løve Hinrich](https://www2.compute.dtu.dk/~jehi/) <a href="https://orcid.org/0000-0003-0258-7151"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" width="16" /></a>,  
 - [Morten Mørup](https://mortenmorup.dk/) <a href="https://orcid.org/0000-0003-4985-4368"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" width="16" /></a>,
 
-at [DTU Compute](https://www.compute.dtu.dk/).
+at 🎓 [DTU Compute](https://www.compute.dtu.dk/).
 
 For technical details and theoretical background, see the preprint:  
-[E²M: Double-Bound α-Divergence Optimization for Tensor-Based Discrete Density Estimation](https://arxiv.org/abs/2405.18220)
+📄 [E²M: Double-Bound α-Divergence Optimization for Tensor-Based Discrete Density Estimation](https://arxiv.org/abs/2405.18220)
 
 
-## How to Run
+## 🚀 How to Run
 
 We provided two demo files as a Jupyter notebook.
-1. [demo_dense.ipynb](https://github.com/gkazunii/eemix/blob/main/demo/demo_dense.ipynb)
-2. [demo_sparse.ipynb](https://github.com/gkazunii/eemix/blob/main/demo/demo_sparse.ipynb)
+📘 [demo_dense.ipynb](https://github.com/gkazunii/eemix/blob/main/demo/demo_dense.ipynb)
+📘 [demo_sparse.ipynb](https://github.com/gkazunii/eemix/blob/main/demo/demo_sparse.ipynb)
 
 Just click and open the demo files. All necessary instructions are described there.
 
-## FAQ
+## ❓FAQ
 
 #### 💡What is the novelty of this algorithm?
 
@@ -104,6 +104,7 @@ Our method assumes that the input tensor is normalized. If the tensor is not nor
 
 No. Non-negativity is an essential assumption of the E²M algorithm.
 
-## License
+## 📜 License
 
 This source code is released under the MIT License.
+Feel free to use, remix, and share responsibly! 🔓✨
