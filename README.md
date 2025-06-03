@@ -43,24 +43,19 @@ Just click and open the demo files. All necessary instructions are described the
 
 #### What is the novelty of this algorithm?
 
-EM-based tensor factorization methods for CP decomposition that optimize the Kullback-Leibler (KL) divergence have been previously studied in [1], [2]. This repository generalizes their approaches to support not only various low-rank tensor structures such as CP, Tucker, Tensor Train, their mixtures, and background terms, but also optimization under the α-divergence. 
+EM-based tensor factorization methods for CP decomposition that optimize the Kullback-Leibler (KL) divergence have been previously studied in [[1](https://ieeexplore.ieee.org/abstract/document/8335432)] and [[2](https://ieeexplore.ieee.org/document/8821380)]. This repository generalizes their approaches to support not only various low-rank tensor structures such as CP, Tucker, Tensor Train, their mixtures, and adaptive background terms, but also optimization under the α-divergence. 
 
-In general, optimizing α-divergence is challenging due to the power term involved, which prevents closed-form updates of all parameters. Our method overcomes this difficulty using a double-bound strategy, described below, enabling closed-form updates for all steps for many low-rank structures.
+In general, α-divergence optimization is challenging due to its power term, which prevents closed-form updates of all parameters. Our method overcomes this difficulty using a double-bound strategy, described below.
 
 
 #### What is the relationship between tensors and probability distributions?
 
-A normalized nonnegative tensor can be interpreted as a discrete probability distribution. Under this interpretation, low-rank tensor decomposition corresponds to identifying latent variables, and the EM algorithm can be used to optimize the KL divergence between the observed and reconstructed distributions.
+A normalized nonnegative tensor can be interpreted as a discrete probability distribution. Specifically, each tensor element $T_{i_1,\dots,i_D}$ can be regarded as $p(x_1=i_1,x_2=i_2,\dots,x_D=i_D)$. When we assume the CP-low-rank structure in the tensor $T$, it can be written as $T_{i_1,\dots,i_D}=\sum_{r} Q_{i_1,\dots,i_D,r}$ where the normalized non-negative higher-order tensor $Q$ is given as $Q_{i_1,\dots,i_D,r}=A^1_{i_1,r} \dots A^D_{i_D,r}$. The model $P$ is summed up over the $r$, and if we regard $r$ as the hidden variable and $\sum_r$ as a marginalization, we can adapt the EM-algorithm, which is a well-known approach for maximum likelihood estimation with the model with hidden variables. 
 
-This probabilistic view allows tensor factorization to be seen as a latent variable model, making it possible to apply information-theoretic techniques.
 
 #### What theory is behind the algorithm?
 
-We show that the α-divergence can be bounded by a sequence of KL divergences via Jensen’s inequality. Specifically:
-
-    Applying Jensen’s inequality to α-divergence yields a bound in terms of KL divergence.
-
-    Applying Jensen’s inequality to KL divergence gives rise to the Evidence Lower Bound (ELBO), as in standard EM.
+The α-divergence can be bounded by the KL divergences using Jensen’s inequality, and KL divergences can be bounded by the ELBO using Jensen’s inequality again. 
 
 Our E²M algorithm optimizes α-divergence by iterative three steps:
 
@@ -70,9 +65,9 @@ Our E²M algorithm optimizes α-divergence by iterative three steps:
 
     E2-step: Tightens the bound from KL divergence to α-divergence.
 
-Both E1 and E2 steps admit closed-form updates. The M-step benefits from a key property: since the ELBO contains no sum inside the logarithm, many low-rank structures decouple into independent subproblems. This enables simultaneous, closed-form updates of all parameters. Moreover, the M-step is equivalent to a many-body approximation, which becomes a convex optimization regardless of the low-rank structure. 
+Both E1 and E2 steps admit closed-form updates. The M-step benefits from a key property: since the ELBO contains no sum inside the logarithm, many low-rank structures decouple into independent subproblems. This enables simultaneous closed-form updates of all parameters. Moreover, the M-step is equivalent to a many-body approximation, which becomes a convex optimization regardless of the low-rank structure, even if the closed-form updates are not available. 
 
-In short, the proposed algorithm can be viewed as an EM framework for tensor multi-body decomposition with latent variables, extending information geometric interpretations (see the case α → 1 discussed in [3]).
+In short, the proposed algorithm can be viewed as an EM framework for tensor many-body approximation with hidden variables [[3](https://openreview.net/forum?id=5yedZXV7wt)]. Extending information geometric interpretations (see the case α → 1 discussed in [3]).
 
 #### What is α-divergence, and why optimize it?
 
@@ -86,15 +81,19 @@ This divergence family includes:
 
     the KL divergence as α → 1,
 
-    the Hellinger distance as α → 0.5
+    the Hellinger distance as α = 0.5
 
     the reverse KL divergence as α → 0.
 
-In our algorithm, α is treated as a hyperparameter. As illustrated in the attached figure, α controls the sensitivity of the reconstruction to outliers or noise. 
+In our algorithm, α is treated as a hyperparameter. α controls the sensitivity of the reconstruction to outliers and noise. Please refer to the demo file to confirm the robustness of the outliers.
 
 #### What are the advantages compared to gradient-based methods?
 
 Gradient-based methods require careful tuning of learning rates. Our E²M algorithm achieves similar or better optimization performance without learning rate tuning. Empirically, we demonstrate that the closed-form updates of our method match or exceed the efficiency and stability of well-tuned gradient-based approaches.
+
+#### What is the computational complexity per iteration?
+
+Since the closed-update formula in the M-step for the CP, Tucker, and Tensor Train structures is proportional to the input tensor $T$, the computational complexity is proportional to the number of nonzero element in T. Specifically, the computational complexity per iteration is O(DNR) for the CP structure, O(DNR^D) for Tucker structure, and  O(NDR^2) for the Train structure, where $N$ is the number of nonzero element in $T$, $R$ is the tensor rank, and $D$ is the tensor order.
 
 ## License
 
