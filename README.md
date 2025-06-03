@@ -104,7 +104,7 @@ Our method assumes that the input tensor is normalized. If the tensor is not nor
 
 No. Non-negativity is an essential assumption of the E²M algorithm.
 
-## 📜 License
+## License
 
 This source code is released under the MIT License.
 
