@@ -83,8 +83,7 @@ In our algorithm, α is treated as a hyperparameter. α controls the sensitivity
 
 #### 💡What are the advantages compared to gradient-based methods?
 
-Gradient-based methods require careful tuning of learning rates. Our E²M algorithm achieves similar or better optimization performance without learning rate tuning. Empirically, we demonstrate that the closed-form updates of our method match or exceed the efficiency and stability of well-tuned gradient-based approaches.
-
+Gradient-based methods require careful tuning of learning rates. Our E²M algorithm achieves similar or better optimization performance without learning rate tuning.
 
 
 #### 💡What is the computational complexity per iteration?
