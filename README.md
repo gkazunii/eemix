@@ -92,7 +92,7 @@ Since the closed-update formula in the M-step for the CP, Tucker, and Tensor Tra
 
 #### 💡Can we apply the algorithm to a non-normalized tensor?
 
-Our method assumes that the input tensor is normalized. If the tensor is not normalized, the following heuristic can be applied. First, record the total sum $\lambda$ of the input tensor $T$. Then, normalize the input tensor and apply the E2M algorithm. Finally, multiply the reconstructed tensor by $\lambda$. Please refer to the example for image reconstrction in the [demo file](https://github.com/gkazunii/eemix/blob/main/demo/demo_dense.ipynb). In the case of optimizing the KL divergence for positive measures (often called I-divergence), the sum of the reconstructed tensor is the same as the sum of the input tensor, so this heuristic is reasonable.
+Our method assumes that the input tensor is normalized. If the tensor is not normalized, the following heuristic can be applied. First, record the total sum $\lambda$ of the input tensor $T$. Then, normalize the input tensor and apply the E2M algorithm. Finally, multiply the reconstructed tensor by $\lambda$. Please refer to the example for image reconstruction in the [demo file](https://github.com/gkazunii/eemix/blob/main/demo/demo_dense.ipynb). In the case of optimizing the KL divergence for positive measures (often called I-divergence), the sum of the reconstructed tensor is the same as the sum of the input tensor, so this heuristic is reasonable.
 
 #### 💡Can we apply the algorithm to a real-valued tensor?
 
