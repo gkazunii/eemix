@@ -25,7 +25,13 @@ This repository provides a non-negative tensor decomposition algorithm for optim
 
 ## Authors and Citation
 
-This is joint work by [Kazu Ghalamkari](https://gkazu.info/), [Jesper Løve Hinrich](https://www2.compute.dtu.dk/~jehi/), and [Morten Mørup](https://mortenmorup.dk/) at [DTU Compute](https://www.compute.dtu.dk/).  
+This is joint work by  
+
+- [Kazu Ghalamkari](https://gkazu.info/) <a href="https://orcid.org/0000-0002-4779-2856"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" width="16" /></a>,  
+- [Jesper Løve Hinrich](https://www2.compute.dtu.dk/~jehi/) <a href="https://orcid.org/0000-0003-0258-7151"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" width="16" /></a>,  
+- [Morten Mørup](https://mortenmorup.dk/) <a href="https://orcid.org/0000-0003-4985-4368"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" width="16" /></a>,
+
+at [DTU Compute](https://www.compute.dtu.dk/).
 
 For technical details and theoretical background, see the preprint:  
 [E²M: Double-Bound α-Divergence Optimization for Tensor-Based Discrete Density Estimation](https://arxiv.org/abs/2405.18220)
