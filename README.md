@@ -88,7 +88,7 @@ Gradient-based methods require careful tuning of learning rates. Our E²M algori
 
 #### 💡What is the computational complexity per iteration?
 
-Since the closed-update formula in the M-step for the CP, Tucker, and Tensor Train structures is proportional to the input $I\times\dots\times I$ D-th order tensor $T$, the computational complexity is proportional to the number of nonzero elements in $T$. Specifically, the computational complexity per iteration is $O(DNR)$ for the CP structure, $O(DNR^D)$ for Tucker structure, and $O(NDR^2)$ for the Train structure, where $N$ is the number of nonzero element in $T$, $R$ is the tensor rank, and $D$ is the tensor order. We emphasize that computational complexity is not proportional to $I^D$ where $I$ is the 
+Since the closed-update formula in the M-step for the CP, Tucker, and Tensor Train structures is proportional to the input $I\times\dots\times I$ D-th order tensor $T$, the computational complexity is proportional to the number of nonzero elements in $T$. Specifically, the computational complexity per iteration is $O(DNR)$ for the CP structure, $O(DNR^D)$ for Tucker structure, and $O(NDR^2)$ for the Train structure, where $N$ is the number of nonzero element in $T$, $R$ is the tensor rank, and $D$ is the tensor order. We emphasize that computational complexity is not proportional to $I^D$.
 
 #### 💡Can we apply the algorithm to a non-normalized tensor?
 
