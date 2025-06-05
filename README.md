@@ -86,7 +86,7 @@ This divergence family includes:
 
     the reverse KL divergence as α → 0.
 
-In our algorithm, α is treated as a hyperparameter. α controls the sensitivity of the reconstruction to outliers and noise. Please refer to the [demo file](https://github.com/gkazunii/eemix/blob/main/demo/demo_dense.ipynb) to confirm the robustness of the outliers.
+Please refer to [here](https://math.stackexchange.com/questions/4536742/proof-that-alpha-divergence-kl-as-alpha-rightarrow-1) for the proof. In our algorithm, α is treated as a hyperparameter. α controls the sensitivity of the reconstruction to outliers and noise. Please refer to the [demo file](https://github.com/gkazunii/eemix/blob/main/demo/demo_dense.ipynb) to confirm the robustness of the outliers.
 
 #### 💡What are the advantages compared to gradient-based methods?
 
