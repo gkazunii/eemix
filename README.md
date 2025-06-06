@@ -64,9 +64,9 @@ The α-divergence can be bounded by the KL divergence using Jensen’s inequalit
 
     M-step: Maximizes the ELBO with respect to model parameters.
 
-    E2-step: Tightens the bound from ELBO to KL divergence.
+    E2-step: Tightens the bound from ELBO to the KL divergence.
 
-    E1-step: Tightens the bound from KL divergence to α-divergence.
+    E1-step: Tightens the bound from the KL divergence to the α-divergence.
 
 Both E1 and E2 steps admit closed-form updates. The M-step benefits from a key property: since the ELBO contains no sum inside the logarithm, many low-rank structures decouple into independent subproblems. This enables simultaneous closed-form updates of all parameters. Moreover, the M-step is equivalent to a many-body approximation, which becomes a convex optimization regardless of the low-rank structure, even if the closed-form updates are not available. In short, the algorithm can be viewed as an EM framework for tensor many-body approximation with hidden variables [[3](https://openreview.net/forum?id=5yedZXV7wt)]. 
 
