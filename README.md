@@ -60,7 +60,7 @@ A normalized nonnegative tensor can be interpreted as a discrete probability dis
 
 #### 💡What theory is behind the algorithm?
 
-The α-divergence can be bounded by the KL divergences using Jensen’s inequality, and KL divergences can be bounded by the ELBO using Jensen’s inequality again. Our E²M algorithm optimizes the α-divergence by iterative three steps:
+The α-divergence can be bounded by the KL divergence using Jensen’s inequality, and the KL divergence can be bounded by the ELBO using Jensen’s inequality again. Our E²M algorithm optimizes the α-divergence by iterative three steps:
 
     M-step: Maximizes the ELBO with respect to model parameters.
 
