@@ -50,7 +50,7 @@ All necessary instructions are described there.
 
 #### 💡What is the novelty of this algorithm?
 
-EM-based tensor factorization methods for CP decomposition that optimize the Kullback-Leibler (KL) divergence have been previously studied in [[1](https://ieeexplore.ieee.org/abstract/document/8335432)] and [[2](https://ieeexplore.ieee.org/document/8821380)]. This repository generalizes their approaches to support not only various low-rank tensor structures such as CP, Tucker, Tensor Train, their mixtures, and adaptive background terms, but also optimization under the α-divergence. In general, α-divergence optimization is challenging due to its power term, which prevents closed-form updates of all parameters. Our method overcomes this difficulty using a double-bound strategy, described below. Furthermore, we provide a proof of convergence and a theoretical relationship to the [tensor many-body approximation](https://openreview.net/forum?id=5yedZXV7wt).
+EM-based tensor factorization methods for CP decomposition that optimize the Kullback-Leibler (KL) divergence have been previously studied in [[1](https://ieeexplore.ieee.org/abstract/document/8335432)] and [[2](https://ieeexplore.ieee.org/document/8821380)]. This repository generalizes their approaches to support not only various low-rank tensor structures such as CP, Tucker, Tensor Train, their mixtures, and adaptive background terms, but also optimization under the α-divergence. In general, α-divergence optimization is challenging due to its power term, which prevents closed-form updates of all parameters. Our method overcomes this difficulty using a double-bound strategy, described below. Furthermore, we provide a proof of convergence and a theoretical relationship to the tensor many-body approximation [[6](https://openreview.net/forum?id=5yedZXV7wt)].
 
 
 #### 💡What is the relationship between tensors and probability distributions? Why can we apply the EM-based method for non-negative tensor decomposition?
@@ -90,7 +90,7 @@ Please refer to [here](https://math.stackexchange.com/questions/4536742/proof-th
 
 #### 💡What are the advantages compared to gradient-based methods?
 
-Gradient-based methods require careful tuning of learning rates. Our E²M algorithm achieves similar or better optimization performance without learning rate tuning.
+Gradient-based methods require careful tuning of learning rates. Our E²M algorithm achieves similar or better optimization performance than gradient-based methods without learning rate tuning. Please refer to Figures 7 and 8 in the [preprint](https://arxiv.org/abs/2405.18220).
 
 #### 💡What are the advantages compared to MU methods?
 
@@ -116,4 +116,3 @@ No. Non-negativity is an essential assumption of the E²M algorithm.
 
 This source code is released under the MIT License.
 
-Feel free to use, remix, and share responsibly! 🔓✨
