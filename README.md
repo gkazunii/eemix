@@ -102,7 +102,7 @@ The αEM algorithm replaces the logarithmic function in the log-likelihood with 
 
 #### 💡What is the computational complexity per iteration?
 
-Since the closed-update formula in the M-step for the CP, Tucker, and Tensor Train structures is proportional to the input $I\times\dots\times I$ tensor $T$, the computational complexity is proportional to the number of nonzero elements in $T$. Specifically, the computational complexity per iteration is $O(DNR)$ for the CP structure, $O(DNR^D)$ for Tucker structure, and $O(NDR^2)$ for the Tensor Train structure, where $N$ is the number of nonzero element in $T$, $R$ is the tensor rank, and $D$ is the order of the tensor $T$. We emphasize that computational complexity is not proportional to $I^D$.
+The computational complexity is proportional to the number of nonzero elements in $T$. Specifically, the computational complexity per iteration is $O(DNR)$ for the CP structure, $O(DNR^D)$ for Tucker structure, and $O(NDR^2)$ for the Tensor Train structure, where $N$ is the number of nonzero element in $T$, $R$ is the tensor rank, and $D$ is the order of the tensor $T$. We emphasize that computational complexity is not proportional to $I^D$.
 
 #### 💡Can we apply the algorithm to a non-normalized tensor?
 
@@ -111,6 +111,10 @@ Our method assumes that the input tensor is normalized. If the tensor is not nor
 #### 💡Can we apply the algorithm to a real-valued tensor?
 
 No. Non-negativity is an essential assumption of the E²M algorithm.
+
+## Acknowledgment
+
+Special thanks to Yusei Yokoyama for his technical advice on the implementation.
 
 ## License
 
