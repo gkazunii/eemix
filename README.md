@@ -1,4 +1,4 @@
-# E²M: Double-Bound α-Divergence Optimization for Tensor-Based Mixture Discrete Density Estimation
+# E²M: Double-Bound α-Divergence Optimization for Tensor-Based Discrete Density Estimation
 
 [![arXiv](https://img.shields.io/badge/arXiv-2405.18220-b31b1b.svg)](https://arxiv.org/abs/2405.18220)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
