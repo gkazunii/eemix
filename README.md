@@ -115,6 +115,7 @@ No. Non-negativity is an essential assumption of the E²M algorithm.
 ## Acknowledgment
 
 Special thanks to Yusei Yokoyama for his technical advice on the implementation.
+This work was supported by NII Open Collaborative Research 2025 Grant Number 24FP07.
 
 ## License
 
