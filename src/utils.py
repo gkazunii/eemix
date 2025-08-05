@@ -3,6 +3,19 @@ import numpy as np
 from functools import reduce
 from itertools import product
 
+def get_dense_tensor_from_sptensor(tensor):
+    shape = tensor.tensor_size
+    dense_tensor = np.zeros(shape, dtype=T_train.values.dtype)
+    
+    coords = tensor.coords
+    values = tensor.values
+    
+    for i in range(coords.shape[0]):
+        idx = tuple(coords[i])
+        dense_tensor[idx] = values[i]
+
+    return dense_tensor
+
 def cp_n_params(tensor_size, rnk):
     """
     Number of parameters for CP structure
