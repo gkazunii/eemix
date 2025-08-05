@@ -98,7 +98,7 @@ def alpha_div_sparse(T,P,alpha,avoid_nan=False):
         return inv_KL_div(T.values,P.values,avoid_nan=avoid_nan)
 
     else:
-        tensor_size = np.size(T)
+        tensor_size = 1
         term = np.sum( T.values**(alpha) * P.values**(1-alpha) )
         return 1.0/ ( alpha*(1-alpha) ) * ( tensor_size - term )
 
