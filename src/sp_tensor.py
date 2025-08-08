@@ -1,6 +1,6 @@
 import numpy as np
 class Sp_tensor:
-    def __init__(self, coords, values, tensor_size, normalize=False, check_empty=False, sort=True):
+    def __init__(self, coords, values, tensor_size, allow_duplication=False, normalize=False, check_empty=False, sort=True):
         
         if not isinstance(values, np.ndarray):
             values = np.array(values)
@@ -16,6 +16,10 @@ class Sp_tensor:
         
         self.coords = np.array(coords, dtype=np.int64)
         self.values = np.array(values, dtype=np.float64)
+
+        if not(allow_duplication):
+            self.coords, self.values = self.kill_duplication()
+        
         self.tensor_size = tensor_size
         self.nnz = len(self.values)
         
@@ -47,6 +51,17 @@ class Sp_tensor:
             
     def normalize(self):
         self.values /= np.sum(self.values)
+
+    def kill_duplication(self):
+        coords_tuple = [tuple(row) for row in self.coords]
+        coords_array = np.array(coords_tuple)
+        unique_coords, inverse_indices = np.unique(self.coords, axis=0, return_inverse=True)
+    
+        values_uniq = np.zeros(len(unique_coords))
+        for i, idx in enumerate(inverse_indices):
+            values_uniq[idx] += self.values[i]
+
+        return unique_coords, values_uniq
 
 
 def dense_to_sparse(X):
