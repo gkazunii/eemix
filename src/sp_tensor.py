@@ -1,6 +1,6 @@
 import numpy as np
 class Sp_tensor:
-    def __init__(self, coords, values, tensor_size, allow_duplication=True, normalize=False, check_empty=False, sort=True):
+    def __init__(self, coords, values, tensor_size, allow_duplication=False, normalize=False, check_empty=False, sort=True):
         
         if not isinstance(values, np.ndarray):
             values = np.array(values)
