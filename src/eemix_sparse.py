@@ -81,6 +81,7 @@ def eemix_sparse(T, Rs, alpha=1.0, model=[1,1,1,1],
 
     # Normalized Weight
     # NOTE: the total sum of eta should be 1.0
+    model = [learn_cp, learn_tucker, learn_train, learn_noise]
     eta_cp, eta_train, eta_tucker, eta_noise = utils.initialize_weights(init_weights, model)
     ranks = {}
 
