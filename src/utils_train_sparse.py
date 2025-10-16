@@ -18,14 +18,14 @@ def get_idx_d_id(idx, tensor_dim, tensor_size):
 
 def get_coords_R(coords): # ( --> d )
     D = coords[0].shape[0]
-    #coords_R = [ np.unique(coords[:,0:d+1],axis=0) for d in range(D) ]
-    coords_R = [ coords[:,0:d+1] for d in range(D) ]
+    coords_R = [ np.unique(coords[:,0:d+1],axis=0) for d in range(D) ]
+    #coords_R = [ coords[:,0:d+1] for d in range(D) ]
     return coords_R
 
 def get_coords_L(coords): #( <-- d )
     D = coords[0].shape[0]
-    #coords_L = [ np.unique(coords[:, D-d-1:D],axis=0) for d in range(D) ]
-    coords_L = [ coords[:, D-d-1:D] for d in range(D) ]
+    coords_L = [ np.unique(coords[:, D-d-1:D],axis=0) for d in range(D) ]
+    #coords_L = [ coords[:, D-d-1:D] for d in range(D) ]
     return coords_L
 
 def get_sparse_train_R(coords_R, G): # ( --> d)
