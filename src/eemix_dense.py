@@ -2,6 +2,7 @@ import sys
 import os
 import numpy as np
 import time
+import warnings
 from itertools import product
 
 import utils
@@ -44,8 +45,11 @@ def eemix(T, Rs, alpha=1.0, model=[1,1,1,1],
     start_time = time.perf_counter()
 
     # Normalize input tensor
-    T = T / np.sum(T)
-
+    total = np.sum(T)
+    if not np.isclose(total, 1.0, atol=1e-6):
+        warnings.warn(f"Input tensor sum is {total:.6e}, not close to 1. Normalizing...")
+        T = T / total
+            
     # tensor dim
     D = np.ndim(T)
 
