@@ -408,10 +408,10 @@ def eemix(T, Rs, alpha=1.0, model=[1,1,1,1],
                     prev_error = alpha_error
 
                     if loss_history:
-                        loss_kl_history.append(kl_error)
-                        loss_nl_history.append(nl_error)
-                        loss_alpha_history.append(alpha_error)
-                        loss_fro_history.append(f_error)
+                        loss_kl_history.append(float(kl_error))
+                        loss_nl_history.append(float(nl_error))
+                        loss_alpha_history.append(float(alpha_error))
+                        loss_fro_history.append(float(f_error))
                         iter_history.append(n_iter)
                         elapsed_times.append(elapsed_time)
 
