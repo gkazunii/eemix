@@ -62,6 +62,12 @@ class Sp_tensor:
             values_uniq[idx] += self.values[i]
 
         return unique_coords, values_uniq
+        
+    def recover_full_dense_tensor(self):
+        dense = np.zeros(self.tensor_size, np.float64)
+        index_tuple = tuple(self.coords[:, ax] for ax in range(self.tensor_dim))
+        np.add.at(dense, index_tuple, self.values)
+        return dense
 
 
 def dense_to_sparse(X):
