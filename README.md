@@ -119,9 +119,9 @@ This work was supported by
 
 - NII Open Collaborative Research 2025 Grant Number 24FP07 (GK),
 - JST, CREST Grant Number JPMJCR22D3, Japan (GK),
-- the Danish Data Science Academy, which is funded by the Novo Nordisk Foundation, Grant Number NNF21SA0069429 (GK).
-- Independent Research Fund Denmark, Grant Number 10.46540/2035-00294B (JLH & MM),
-- the Novo Nordisk Foundation, Grant Number NNF23OC0083524 (MM)
+- the Danish Data Science Academy, which is funded by the Novo Nordisk Foundation, Grant Number NNF21SA0069429 (GK),
+- Independent Research Fund Denmark, Grant Number 10.46540/2035-00294B (JLH & MM), and
+- the Novo Nordisk Foundation, Grant Number NNF23OC0083524 (MM).
 
 <div align="left">
   <img
