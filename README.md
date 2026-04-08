@@ -34,7 +34,7 @@ This is joint work by
 at 🎓 [DTU Compute](https://www.compute.dtu.dk/).
 
 For technical details and theoretical background, see the paper published in TMLR2026:  
-📄 [E²M: Double-Bound α-Divergence Optimization for Tensor-Based Discrete Density Estimation](https://openreview.net/forum?id=954CjhXSXL) [[Video]](https://www.youtube.com/watch?v=adXhQ8roDGA) [[Slide](https://speakerdeck.com/gkazunii/tmlr-2026-featured-certification-double-bounded-a-divergence-optimization-for-density-estimation)]
+📄 [E²M: Double-Bound α-Divergence Optimization for Tensor-Based Discrete Density Estimation](https://openreview.net/forum?id=954CjhXSXL) [[Video](https://www.youtube.com/watch?v=adXhQ8roDGA)] [[Slide](https://speakerdeck.com/gkazunii/tmlr-2026-featured-certification-double-bounded-a-divergence-optimization-for-density-estimation)]
 
 ```
 @article{
@@ -67,7 +67,7 @@ EM-based tensor factorization methods for CP decomposition that optimize the Kul
 
 #### 💡What is the relationship between tensors and probability distributions? Why can we apply the EM-based method for non-negative tensor decomposition?
 
-A normalized nonnegative tensor can be interpreted as a discrete probability distribution. Specifically, each tensor element $T_{i_1,\dots,i_D}$ can be regarded as $p(x_1=i_1,x_2=i_2,\dots,x_D=i_D)$. The index set $[I_1]\times[I_2]\times\dots\times[I_D]$ is regarded as the sample space $\Omega$ of the distribution $p$. When we assume the CP-low-rank structure in the tensor $T$, it can be written as $T_{i_1,\dots,i_D}=\sum_{r} Q_{i_1,\dots,i_D,r}$ where the normalized non-negative higher-order tensor $Q$ is given as $Q_{i_1,\dots,i_D,r}=A^1_{i_1,r} \dots A^D_{i_D,r}$. The model $P$ is summed up over the index $r$, and if we regard the index $r$ as the hidden variable and $\sum_r$ as a marginalization, we can adapt the EM-algorithm, which is a well-known approach for maximum likelihood estimation for the model with hidden variables. Please refer to section B.2. of the [preprint](https://arxiv.org/abs/2405.18220) for more details.
+A normalized nonnegative tensor can be interpreted as a discrete probability distribution. Specifically, each tensor element $T_{i_1,\dots,i_D}$ can be regarded as $p(x_1=i_1,x_2=i_2,\dots,x_D=i_D)$. The index set $[I_1]\times[I_2]\times\dots\times[I_D]$ is regarded as the sample space $\Omega$ of the distribution $p$. When we assume the CP-low-rank structure in the tensor $T$, it can be written as $T_{i_1,\dots,i_D}=\sum_{r} Q_{i_1,\dots,i_D,r}$ where the normalized non-negative higher-order tensor $Q$ is given as $Q_{i_1,\dots,i_D,r}=A^1_{i_1,r} \dots A^D_{i_D,r}$. The model $P$ is summed up over the index $r$, and if we regard the index $r$ as the hidden variable and $\sum_r$ as a marginalization, we can adapt the EM-algorithm, which is a well-known approach for maximum likelihood estimation for the model with hidden variables. Please refer to section B.2. of the [paper](https://openreview.net/forum?id=954CjhXSXL) for more details.
 
 
 #### 💡What theory is behind the algorithm?
@@ -102,7 +102,7 @@ Please refer to [here](https://math.stackexchange.com/questions/4536742/proof-th
 
 #### 💡What are the advantages compared to gradient-based methods?
 
-Gradient-based methods require careful tuning of learning rates. Our E²M algorithm achieves similar or better optimization performance than gradient-based methods without learning rate tuning. Please refer to Figures 7 and 8 in the [preprint](https://arxiv.org/abs/2405.18220).
+Gradient-based methods require careful tuning of learning rates. Our E²M algorithm achieves similar or better optimization performance than gradient-based methods without learning rate tuning.
 
 #### 💡What are the advantages compared to MU methods?
 
