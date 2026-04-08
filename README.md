@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/downloads/release/python-3120/)
 
-This repository provides a non-negative tensor decomposition algorithm for optimizing the α-divergence using a double-bound strategy. The method has the following advantages:
+This repository provides a non-negative tensor decomposition algorithm for optimizing the α-divergence using a double-bound strategy, which was published in [TMLR 2026 with a Featured Certification🎉](https://openreview.net/pdf?id=954CjhXSXL). The method has the following advantages:
 
 1. ✨**No More Learning Rate Tuning**  
    Our approach is based on a double-bound EM algorithm, where all parameters are updated simultaneously at each step. It does not rely on gradient-based optimization, eliminating the need for learning rate tuning.
@@ -33,8 +33,8 @@ This is joint work by
 
 at 🎓 [DTU Compute](https://www.compute.dtu.dk/).
 
-For technical details and theoretical background, see the preprint:  
-📄 [E²M: Double-Bound α-Divergence Optimization for Tensor-Based Discrete Density Estimation](https://arxiv.org/abs/2405.18220)
+For technical details and theoretical background, see the paper published in TMLR2026:  
+📄 [E²M: Double-Bound α-Divergence Optimization for Tensor-Based Discrete Density Estimation](https://openreview.net/forum?id=954CjhXSXL)
 
 
 ## How to Run
