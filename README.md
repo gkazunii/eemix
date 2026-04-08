@@ -34,8 +34,20 @@ This is joint work by
 at 🎓 [DTU Compute](https://www.compute.dtu.dk/).
 
 For technical details and theoretical background, see the paper published in TMLR2026:  
-📄 [E²M: Double-Bound α-Divergence Optimization for Tensor-Based Discrete Density Estimation](https://openreview.net/forum?id=954CjhXSXL)
+📄 [E²M: Double-Bound α-Divergence Optimization for Tensor-Based Discrete Density Estimation](https://openreview.net/forum?id=954CjhXSXL) [[Video]](https://www.youtube.com/watch?v=adXhQ8roDGA) [[Slide](https://speakerdeck.com/gkazunii/tmlr-2026-featured-certification-double-bounded-a-divergence-optimization-for-density-estimation)]
 
+```
+@article{
+   ghalamkari2026em,
+   title={E\${\textasciicircum}2\$M: Double Bounded \${\textbackslash}alpha\$-Divergence Optimization for Tensor-based Discrete Density Estimation},
+   author={Kazu Ghalamkari and Jesper L{\o}ve Hinrich and Morten M{\o}rup},
+   journal={Transactions on Machine Learning Research},
+   issn={2835-8856},
+   year={2026},
+   url={https://openreview.net/forum?id=954CjhXSXL},
+   note={Featured Certification, J2C Certification}
+}
+```
 
 ## How to Run
 
